@@ -9,6 +9,7 @@ const { ObjectID } = require("mongodb");
 
 module.exports.getAllTags = async (req, res, next) => {
   let value = req.params.value;
+  console.log("123456");
   try {
     const resp = await Tag.find(
       {},
@@ -123,6 +124,7 @@ module.exports.addUserDefinedTag = async (req, res, next) => {
 };
 
 module.exports.searchTag = async ({ body: { currentUser, value } }, res) => {
+  console.log("search_tag");
   let data = [],
     userData = [];
 

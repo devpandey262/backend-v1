@@ -11,6 +11,8 @@ module.exports.getAllProblemsToRelatedTag = async (req, res) => {
   let { user_id, tags } = req.body;
   let offset = req.params.offset * 20;
 
+  console.log("testingggg");
+
   if (user_id === null) {
     try {
       const questions = await Question.find(
